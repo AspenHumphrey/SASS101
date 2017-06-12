@@ -1,0 +1,28 @@
+//importing from different files
+@import 'variables';
+@import 'mixins';
+@import 'navbar';
+
+%block {
+	width: 50px;
+	height: 50px;
+	border: 2px solid;
+	display: inline-block;
+}
+
+// variables
+body {
+	background-color: $perfect-red;
+}
+
+.myBtn {
+	@include my-btn(green, 10px, pink);
+}
+
+.yourBtn {
+	@include my-btn(orange, 15px, white);
+}
+
+.box {
+	@extend %block;
+}
